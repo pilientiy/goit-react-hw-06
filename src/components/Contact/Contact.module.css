@@ -1,0 +1,44 @@
+.contactContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 8px;
+    width: 250px;
+}
+
+.contactsList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    max-width: 1200px;
+    /* align-items: center;
+    justify-content: center; */
+}
+
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+}
+
+.contactContainer {
+    display: flex;
+    gap: 30px;
+}
+
+.contactsItem {
+    display: flex;
+    align-items: center;
+}
+
+.myIcon {
+    margin-right: 10px;
+}
+
+.contactBtn {
+    background-color: rgb(222, 222, 222);
+    padding: 5px;
+    height: 35px;
+}

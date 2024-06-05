@@ -1,0 +1,15 @@
+.contactsList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    max-width: 1200px;
+    /* align-items: center;
+    justify-content: center; */
+}
+
+.contactsItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
