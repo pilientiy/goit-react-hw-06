@@ -1,18 +1,23 @@
-.container {
+.filter {
     display: flex;
     flex-direction: column;
-    border: solid 1px black;
-    border-radius: 8px;
-    gap: 15px;
-    padding: 10px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    max-width: 350px;
-}
-
-.searchBoxInput {
-    display: flex;
-    width: 100%;
-    padding: 5px;
-    box-sizing: border-box;
-}
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 24px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+  .filterInput {
+   
+    padding-left: 16px;
+    width: 240px;
+    height: 32px;
+    border-radius: 4px;
+    border-bottom: 1px solid #827c7c;
+    border-left: 1px solid #827c7c;
+    border-right: 1px solid #827c7c;
+    border-top: 1px solid #827c7c;
+    outline: transparent;
+    margin: 0 auto;
+  }

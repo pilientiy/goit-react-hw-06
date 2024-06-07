@@ -1,44 +1,24 @@
-import { useDispatch, useSelector } from 'react-redux';
-import { deleteContact } from '../../redux/contactsSlice';
+import { HiUser, HiPhone } from "react-icons/hi";
+import { useDispatch } from "react-redux";
+import { deleteContact } from "../../redux/contactsSlice";
+import style from  '../Contact/Contact.module.css';
 
-import { selectFilteredContacts } from '../../redux/contactsSlice';
-
-import { FaUser, FaPhoneAlt } from 'react-icons/fa';
-import css from './Contact.module.css';
-
-export default function Contact() {
-  const filteredContacts = useSelector(selectFilteredContacts);
-
+function Contact({ contact: { id, name, number } }) {
   const dispatch = useDispatch();
-
-  const handleDelete = contactId => {
-    dispatch(deleteContact(contactId));
+  const handleDelete = () => {
+    dispatch(deleteContact(id));
   };
-
   return (
-    <ul className={css.contactsList}>
-      {filteredContacts.map(contact => (
-        <li className={css.contactsItem} key={contact.id}>
-          <div className={css.contactContainer}>
-            <div className={css.contacts}>
-              <p className={css.contactsItem}>
-                <FaUser className={css.myIcon} />
-                {contact.name}
-              </p>
-              <p className={css.contactsItem}>
-                <FaPhoneAlt className={css.myIcon} />
-                {contact.number}
-              </p>
-            </div>
-            <button
-              className={css.contactBtn}
-              onClick={() => handleDelete(contact.id)}
-            >
-              Delete
-            </button>
+    <>
+        <div className={style.container}>
+          <div>
+              <div className={style.info}><HiUser className={style.icon} />{name}</div>
+              <div className={style.info}><HiPhone className={style.icon} />{number}</div> 
           </div>
-        </li>
-      ))}
-    </ul>
+          <button className={style.button} onClick={handleDelete}>Delete</button>
+      </div>
+    </>
   );
 }
+
+export default Contact;
